@@ -17,6 +17,10 @@ FONT = "Inter, 'Segoe UI', Roboto, Arial, sans-serif"
 
 # kpis: (label, value)  chart: bars|line|donut  rows: (title, meta, status)  chip: (title, sub)
 SPEC = {
+ "edurestaurant-web": dict(screen="Tables & orders", kpis=[("Sales today", "Rs 1.2L"), ("Open tables", "9"), ("Orders", "74")], chart="bars",
+                      rows=[("Table 6", "Karahi, Naan x4", "Kitchen"), ("Takeaway 18", "Burger meal x2", "Ready"), ("Table 2", "Bill printed", "Paid")], chip=("Bill printed", "Table 2 · Rs 4,350")),
+ "edubs-rt-web": dict(screen="Counter sale", kpis=[("Sales today", "Rs 3.4L"), ("Bills", "212"), ("Low stock", "14")], chart="line",
+                      rows=[("Bill #8841", "Counter 1", "Paid"), ("Bill #8842", "Counter 2", "Paid"), ("Purchase #612", "Supplier", "Due")], chip=("Stock updated", "Sale posted to inventory")),
  "edubsstd-web": dict(screen="Dashboard", kpis=[("Sales today", "Rs 4.8L"), ("Receivable", "Rs 12.1L"), ("Stock items", "3,240")], chart="line",
                       rows=[("Invoice #10482", "Al-Noor Traders", "Paid"), ("Purchase #2291", "Metro Supply", "Due"), ("Voucher #771", "Cash book", "Posted")], chip=("Synced", "Desktop and web, one database")),
  "educampus-core-erp": dict(screen="Students", kpis=[("Students", "1,286"), ("Present today", "94%"), ("Campuses", "3")], chart="bars",
