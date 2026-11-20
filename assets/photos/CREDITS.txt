@@ -1,0 +1,3 @@
+Card photos: Unsplash (https://unsplash.com/license), free for commercial use, no attribution required.
+Downloaded via images.unsplash.com/photo-<id>; ids are listed in this session's download step.
+Replace any file with a real photo of your client site using the same name (<slug>.jpg), then run: python build.py
