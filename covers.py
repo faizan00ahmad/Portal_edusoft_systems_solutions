@@ -139,7 +139,6 @@ def desktop(p, s, c, rnd):
     # title bar
     o.append(f'<path d="M{X} {Y + 16} a16 16 0 0 1 16 -16 h{W - 32} a16 16 0 0 1 16 16 v14 h-{W} z" fill="#fff"/>')
     o.append("".join(f'<circle cx="{X + 18 + i * 14}" cy="{Y + 16}" r="4.5" fill="{col}"/>' for i, col in enumerate(("#ff5f57", "#febc2e", "#28c840"))))
-    o.append(f'<rect x="{X + W / 2 - 110}" y="{Y + 8}" width="220" height="16" rx="8" fill="#eef2ef"/>' + T(X + W / 2, Y + 20, f"{p['slug'].split('-')[0]}.edusoftsolutions.com", 9.5, "#6b7a71", 500, "middle"))
     # sidebar
     sx, sy, sw = X, Y + 30, 150
     o.append(f'<path d="M{sx} {sy} h{sw} v{H - 30} h-{sw - 16} a16 16 0 0 1 -16 -16 z" fill="{mix(c, "#0b1f15", .55)}"/>')

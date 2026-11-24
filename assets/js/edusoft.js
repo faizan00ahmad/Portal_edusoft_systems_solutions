@@ -82,6 +82,16 @@
     modal.addEventListener('cancel', () => $('video', modal)?.pause());
   }
 
+  // product page: real screenshots with tabs, auto-rotating until the visitor picks one
+  $$('[data-screens]').forEach(m => {
+    const imgs = $$('.shots img', m), btns = $$('.stabs button', m);
+    if (imgs.length < 2) return;
+    let i = 0, timer;
+    const show = n => { i = n; imgs.forEach((x, k) => x.classList.toggle('on', k === n)); btns.forEach((x, k) => x.classList.toggle('on', k === n)); };
+    btns.forEach((b, k) => b.addEventListener('click', () => { clearInterval(timer); show(k); }));
+    if (!calm) timer = setInterval(() => show((i + 1) % imgs.length), 4500);
+  });
+
   // count-up numbers in the "at a glance" band
   $$('[data-count]').forEach(el => {
     const end = +el.dataset.count, suf = el.dataset.suffix || '';
