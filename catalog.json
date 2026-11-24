@@ -29,13 +29,13 @@
     },
     {
       "id": "retail",
-      "label": "Shops & stores",
+      "label": "Shops, stores & retail",
       "icon": "fa-store",
       "intro": "Stock, barcode billing and customer accounts for shops, plus duty scheduling for sanitation teams."
     },
     {
       "id": "food",
-      "label": "Restaurants",
+      "label": "Restaurants & hotels",
       "icon": "fa-utensils",
       "intro": "Order taking and table management for restaurants, on an Android phone."
     },
@@ -47,7 +47,7 @@
     },
     {
       "id": "enterprise",
-      "label": "Accounts, HR & ERP",
+      "label": "Enterprise business",
       "icon": "fa-building",
       "intro": "Accounts, payroll, multi-branch ERP and FBR digital invoicing."
     },
@@ -56,6 +56,24 @@
       "label": "Fuel stations",
       "icon": "fa-gas-pump",
       "intro": "Software for petrol pumps and fuel stations."
+    },
+    {
+      "id": "distribution",
+      "label": "Distribution",
+      "icon": "fa-truck-ramp-box",
+      "intro": "Software for distributors, wholesalers and trading companies."
+    },
+    {
+      "id": "invoicing",
+      "label": "Invoicing",
+      "icon": "fa-file-invoice",
+      "intro": "FBR digital invoicing and sales tax."
+    },
+    {
+      "id": "pharmacy",
+      "label": "Pharmacy",
+      "icon": "fa-prescription-bottle-medical",
+      "intro": "Software for pharmacies and medical stores."
     }
   ],
   "products": [
@@ -271,7 +289,7 @@
       "id": 1,
       "slug": "edubsstd-web",
       "name": "EduBS Standard",
-      "industry": "enterprise",
+      "industry": "distribution",
       "icon": "fa-cloud-arrow-up",
       "image": "assets/illustrations/edubsstd-web.svg",
       "tagline": "Business Solution for distribution and trading businesses.",
@@ -483,7 +501,7 @@
       "id": 15,
       "slug": "digital-invoicing-fbr",
       "name": "Digital Invoicing (FBR)",
-      "industry": "enterprise",
+      "industry": "invoicing",
       "icon": "fa-receipt",
       "tagline": "FBR digital invoices with HS codes and provincial tax handled.",
       "audience": "Sales-tax registered businesses that must issue FBR digital invoices.",
@@ -749,7 +767,7 @@
       "id": 23,
       "slug": "edu-pharmacy",
       "name": "Edu Pharmacy Manager",
-      "industry": "healthcare",
+      "industry": "pharmacy",
       "icon": "fa-pills",
       "tagline": "Pharmacy ERP: counter billing, batch and expiry, purchases and accounts.",
       "audience": "Medical stores, pharmacies, pharmacy chains and hospital pharmacies.",

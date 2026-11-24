@@ -11,7 +11,7 @@ from html import escape as e
 ROOT = Path(__file__).parent
 cat = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8-sig"))
 raw = {r["id"]: r for r in json.loads((ROOT / "data.json").read_text(encoding="utf-8-sig"))}
-COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a", "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2"}
+COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a", "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2", "distribution": "#b7791f", "invoicing": "#2b6cb0", "pharmacy": "#0e8f9a"}
 OUT = ROOT / "assets" / "covers"
 FONT = "Inter, 'Segoe UI', Roboto, Arial, sans-serif"
 
