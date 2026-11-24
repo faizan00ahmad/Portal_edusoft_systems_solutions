@@ -222,33 +222,6 @@
       ]
     },
     {
-      "id": 3,
-      "slug": "educampus-finance-accounts",
-      "name": "EduCampus Finance & Accounts",
-      "industry": "education",
-      "icon": "fa-file-invoice-dollar",
-      "image": "assets/illustrations/educampus-finance-accounts.svg",
-      "tagline": "Fee vouchers, collections and school accounts.",
-      "audience": "School and college accounts offices.",
-      "intro": [
-        "Print fee vouchers for every class, record what comes in, and see who hasn't paid. Expenses and ledgers sit in the same system, so month-end doesn't need a separate spreadsheet."
-      ],
-      "features": [
-        [
-          "Fee vouchers in bulk",
-          "Monthly or yearly vouchers for a class or the whole school."
-        ],
-        [
-          "Collections & defaulters",
-          "Mark payments and pull a defaulter list by class."
-        ],
-        [
-          "Expenses & ledgers",
-          "Vouchers, cash book and ledgers for the institution."
-        ]
-      ]
-    },
-    {
       "id": 14,
       "slug": "pharmacy-management",
       "name": "Pharmacy Management System",
