@@ -183,13 +183,13 @@
     {
       "id": 20,
       "slug": "edubs-rt-web",
-      "name": "EduBS RT",
+      "name": "Edu Business RT",
       "industry": "retail",
       "icon": "fa-cash-register",
       "tagline": "Business Solution for retail stores: billing, stock in, stock out and accounts.",
       "audience": "Retail shops, marts, superstores and stores with one or more counters.",
       "intro": [
-        "EduBS RT (Business Solution, Retail) is built for retail stores. Counter billing, purchases, stock in and stock out, customer and supplier accounts and financial reports all run in one system.",
+        "Edu Business RT (Business Solution, Retail) is built for retail stores. Counter billing, purchases, stock in and stock out, customer and supplier accounts and financial reports all run in one system.",
         "Every sale reduces stock and posts to accounts automatically, so the owner always knows what is on the shelf, what is owed, and what the store earned today."
       ],
       "features": [
@@ -229,7 +229,7 @@
       "faq": [
         [
           "What does RT stand for?",
-          "Retail. EduBS RT is the retail edition of Edusoft Business Solution."
+          "Retail. Edu Business RT is the retail edition of Edusoft Business Solution."
         ],
         [
           "Can it run several counters?",
@@ -288,14 +288,14 @@
     {
       "id": 1,
       "slug": "edubsstd-web",
-      "name": "EduBS Standard",
+      "name": "Edu Business Standard",
       "industry": "distribution",
       "icon": "fa-cloud-arrow-up",
       "image": "assets/illustrations/edubsstd-web.svg",
       "tagline": "Business Solution for distribution and trading businesses.",
       "audience": "Distributors, wholesalers and trading companies.",
       "intro": [
-        "EduBS Standard is built for distribution businesses. It covers order booking, deliveries, salesmen and routes, stock in the warehouse, and the full finance side: customers, suppliers, banks and financial statements.",
+        "Edu Business Standard is built for distribution businesses. It covers order booking, deliveries, salesmen and routes, stock in the warehouse, and the full finance side: customers, suppliers, banks and financial statements.",
         "Orders booked in the field turn into invoices and deliveries, stock and accounts update by themselves, and recoveries are tracked against every shop."
       ],
       "features": [
@@ -500,7 +500,7 @@
     {
       "id": 15,
       "slug": "digital-invoicing-fbr",
-      "name": "Digital Invoicing (FBR)",
+      "name": "Digital Invoicing Software",
       "industry": "invoicing",
       "icon": "fa-receipt",
       "tagline": "FBR digital invoices with HS codes and provincial tax handled.",
@@ -665,13 +665,13 @@
     {
       "id": 22,
       "slug": "edu-enterprise",
-      "name": "Edu Enterprise",
+      "name": "Edu Enterprise Software",
       "industry": "enterprise",
       "icon": "fa-building",
       "tagline": "Enterprise ERP: manufacturing, inventory, sales, purchase, finance and HR.",
       "audience": "Manufacturers and growing companies with several departments or branches.",
       "intro": [
-        "Edu Enterprise is a full ERP for companies that make and sell. Production, raw material and finished goods stock, purchasing, sales, finance and HR run in one system, so every department works from the same numbers.",
+        "Edu Enterprise Software is a full ERP for companies that make and sell. Production, raw material and finished goods stock, purchasing, sales, finance and HR run in one system, so every department works from the same numbers.",
         "Management sees costs, stock, receivables and profit across the whole company, branch by branch and department by department."
       ],
       "features": [
@@ -715,7 +715,7 @@
         ],
         [
           "Can it be set up for our process?",
-          "Yes. Edu Enterprise is configured for each company's products, departments and approvals."
+          "Yes. Edu Enterprise Software is configured for each company's products, departments and approvals."
         ]
       ],
       "workflow": [
