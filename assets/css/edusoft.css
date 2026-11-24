@@ -312,3 +312,33 @@ footer ul a:hover{color:var(--brand)}
 .media.screen{display:grid;place-items:center;padding:7% 6%;background:radial-gradient(120% 90% at 85% 10%,color-mix(in srgb,var(--c) 70%,transparent),transparent 60%),radial-gradient(60% 60% at 0 100%,rgba(243,154,30,.35),transparent 70%),linear-gradient(135deg,color-mix(in srgb,var(--c) 30%,#06140d),#030a06)}.media.screen .win{width:100%;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 24px 50px -12px rgba(0,0,0,.6)}.media.screen .bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#f4f6f5;border-bottom:1px solid #e6ebe8}.media.screen .bar i{width:9px;height:9px;border-radius:50%;background:#ff5f57}.media.screen .bar i:nth-child(2){background:#febc2e}.media.screen .bar i:nth-child(3){background:#28c840}.media.screen .win img{display:block;width:100%;height:auto}
 .media.screen{grid-template-rows:auto auto;align-content:center;gap:14px}.media.screen .shots{display:grid}.media.screen .shots img{grid-area:1/1;opacity:0;transition:opacity .5s}.media.screen .shots img.on{opacity:1}.stabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}.stabs button{font:600 .78rem/1 inherit;font-family:inherit;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 12px;border-radius:99px;cursor:pointer}.stabs button.on{background:#fff;color:#14231b}
 .screens .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.gshot{margin:0;padding:14px;border-radius:22px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 30%,#06140d),#030a06)}.gshot .win{display:block;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 18px 40px -14px rgba(0,0,0,.6);transition:transform .3s}.gshot .win:hover{transform:translateY(-4px)}.gshot .bar{display:flex;gap:5px;padding:6px 10px;background:#f4f6f5;border-bottom:1px solid #e6ebe8}.gshot .bar i{width:8px;height:8px;border-radius:50%;background:#ff5f57}.gshot .bar i:nth-child(2){background:#febc2e}.gshot .bar i:nth-child(3){background:#28c840}.gshot img{display:block;width:100%;height:auto}.gshot figcaption{color:#fff;font-weight:700;text-align:center;margin-top:12px}@media(max-width:900px){.screens .gallery{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- language toggle */
+.lang{display:inline-flex;align-items:center;height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:13.5px;color:var(--ink);white-space:nowrap}
+.lang:hover{border-color:var(--brand);color:var(--brand)}
+.lang.ur{font-family:'Noto Nastaliq Urdu',serif;font-size:14px;line-height:1;padding-bottom:4px}
+
+/* ---------- Urdu (right to left) */
+html[lang=ur] body,html[lang=ur] h1,html[lang=ur] h2,html[lang=ur] h3,html[lang=ur] h4,html[lang=ur] h5,html[lang=ur] .oneline,html[lang=ur] .oneline b,html[lang=ur] button,html[lang=ur] .btn{font-family:'Noto Nastaliq Urdu',Inter,serif;letter-spacing:0}
+html[lang=ur] body{line-height:2.1}
+html[lang=ur] h1,html[lang=ur] h2,html[lang=ur] h3{line-height:1.9}
+html[lang=ur] .oneline b,html[lang=ur] .logo,html[lang=ur] .card h3,html[lang=ur] .phero h1,html[lang=ur] .lang:not(.ur),html[lang=ur] .glance b,html[lang=ur] .chip-stat b{font-family:'Inter Tight',Inter,sans-serif}
+html[lang=ur] .card h3 a,html[lang=ur] .phero h1{direction:ltr;unicode-bidi:isolate}
+html[lang=ur] .phero h1{line-height:1.15}
+[dir=rtl] .sound{left:auto;right:12px}
+[dir=rtl] .badge-ind{left:auto;right:12px}
+[dir=rtl] .tag-new{left:auto;right:12px}
+[dir=rtl] .peek{right:auto;left:12px}
+[dir=rtl] .cardacts .more{margin-left:0;margin-right:auto}
+[dir=rtl] .cardacts .more i,[dir=rtl] .btn .fa-arrow-right{transform:scaleX(-1)}
+[dir=rtl] .pp{transform:translateX(-100%)}
+[dir=rtl] .peekpanel.open .pp{transform:none}
+[dir=rtl] .pp-close{right:auto;left:14px}
+[dir=rtl] .wa-float{right:auto;left:18px}
+[dir=rtl] .vclose{right:auto;left:10px}
+[dir=rtl] .chip-stat{right:auto;left:16px}
+[dir=rtl] .mod li{padding-left:0;padding-right:18px}
+[dir=rtl] .mod li::before{left:auto;right:0}
+[dir=rtl] .tabs .ind-bar{left:auto;right:5px}
+[dir=rtl] .cred code,[dir=rtl] .panel code{direction:ltr;unicode-bidi:isolate}
+html[lang=ur] body{font-size:16.5px}html[lang=ur] .card .body p{font-size:14.5px}

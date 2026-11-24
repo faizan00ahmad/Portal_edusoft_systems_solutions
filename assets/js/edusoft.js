@@ -3,6 +3,8 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const UR = document.documentElement.lang === 'ur';
+  const L = (en, ur) => UR ? ur : en;
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   // mobile nav
@@ -20,7 +22,7 @@
       t.value = text; document.body.appendChild(t); t.select();
       document.execCommand('copy'); t.remove();
     }
-    toast.querySelector('span').textContent = `Copied "${text}"`;
+    toast.querySelector('span').textContent = L(`Copied "${text}"`, `کاپی ہو گیا: ${text}`);
     toast.classList.add('show');
     clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 1800);
   }
@@ -122,7 +124,7 @@
     const on = $('button.on', tabsEl);
     if (!on || !bar) return;
     bar.style.width = on.offsetWidth + 'px';
-    bar.style.transform = `translateX(${on.offsetLeft - 5}px)`;
+    bar.style.transform = UR ? `translateX(${-(tabsEl.clientWidth - on.offsetLeft - on.offsetWidth - 5)}px)` : `translateX(${on.offsetLeft - 5}px)`;
   }
 
   function apply() {
@@ -164,12 +166,12 @@
       <p>${esc(p.intro)}</p>
       <ul class="pp-feats">${p.features.map(([t, d]) => `<li><i class="fas fa-check"></i><span><b>${esc(t)}</b>${esc(d)}</span></li>`).join('')}</ul>
       ${p.user ? `<div class="logrow">
-        <button class="cred" data-copy="${esc(p.user)}">user <code>${esc(p.user)}</code> <i class="far fa-copy"></i></button>
-        <button class="cred" data-copy="${esc(p.pass)}">pass <code>${esc(p.pass)}</code> <i class="far fa-copy"></i></button>
-      </div>` : '<div class="logrow"><span class="cred soon"><i class="far fa-clock"></i> Demo link coming soon</span></div>'}`;
+        <button class="cred" data-copy="${esc(p.user)}">${L('user', 'یوزر')} <code>${esc(p.user)}</code> <i class="far fa-copy"></i></button>
+        <button class="cred" data-copy="${esc(p.pass)}">${L('pass', 'پاس')} <code>${esc(p.pass)}</code> <i class="far fa-copy"></i></button>
+      </div>` : '<div class="logrow"><span class="cred soon"><i class="far fa-clock"></i> ' + L('Demo link coming soon', 'ڈیمو لنک جلد آ رہا ہے') + '</span></div>'}`;
     $('.pp-acts', pk).innerHTML = `
       <a class="btn demo" href="${esc(p.demo)}" ${p.demoBlank ? 'target="_blank" rel="noopener"' : ''} ${p.apk ? 'download' : ''}>${esc(p.demoLabel)}</a>
-      <a class="btn btn-light" href="${esc(p.page)}">Full details</a>`;
+      <a class="btn btn-light" href="${esc(p.page)}">${L('Full details', 'مکمل تفصیل')}</a>`;
     pk.classList.add('open'); pk.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     $('.pp-close', pk).focus();
