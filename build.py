@@ -290,7 +290,9 @@ def product_page(p):
     elif vfile:
         media = f'<div class="media vid"><video controls preload="metadata" playsinline poster="{pre}{e(p["image"])}"><source src="{pre}{vfile}" type="video/{vext}"></video></div>'
     else:
-        media = f'<div class="media"><img src="{pre}{e(p["image"])}" alt="{e(p["name"])}"><div class="chip-stat"><b>Free</b><small>live demo</small></div></div>'
+        shot = next((f"assets/screens/{p['slug']}.{x}" for x in ("png", "jpg", "webp") if (ROOT / "assets" / "screens" / f"{p['slug']}.{x}").exists()), None)
+        media = (f'<div class="media screen"><div class="win"><div class="bar"><i></i><i></i><i></i><span>{e(p["url"].split("//")[-1].strip("/"))}</span></div><img src="{pre}{shot}" alt="{e(p["name"])} screen"></div><div class="chip-stat"><b>Free</b><small>live demo</small></div></div>' if shot else
+                 f'<div class="media"><img src="{pre}{e(p["image"])}" alt="{e(p["name"])}"><div class="chip-stat"><b>Free</b><small>live demo</small></div></div>')
     icons = ["fa-bolt", "fa-chart-line", "fa-shield-halved", "fa-layer-group", "fa-gears", "fa-file-lines", "fa-users", "fa-boxes-stacked"]
     body = "".join(f"<p>{e(x)}</p>" for x in p["intro"])
     if p.get("workflow"):
