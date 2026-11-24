@@ -70,7 +70,7 @@ def youtube_id(url):
 def head(title, desc, pre, active="", page_url="", image="", accent=""):
     links = [("Software", f"{pre}index.html#software", "software"), ("Mobile apps", f"{pre}index.html#apps", "apps"),
              ("Clients", f"{pre}index.html#clients", "clients"), ("Contact", "#contact", "contact")]
-    og_img = SITE + (image or BYID[14]["poster"])
+    og_img = SITE + (image or BYID[15]["poster"])
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -202,7 +202,7 @@ def peek_data():
     return json.dumps(out, ensure_ascii=False).replace("</", "<\\/")
 
 # ------------------------------------------------------------------ home page
-INTRO_POSTER = "assets/video/intro-poster.jpg" if (ROOT / "assets/video/intro-poster.jpg").exists() else BYID[14]["poster"]
+INTRO_POSTER = "assets/video/intro-poster.jpg" if (ROOT / "assets/video/intro-poster.jpg").exists() else BYID[15]["poster"]
 
 def intro_video():
     """Short intro video beside the one-line intro. File: assets/video/intro.mp4, or "introVideo" (YouTube) in catalog.json."""

@@ -221,52 +221,6 @@
       ]
     },
     {
-      "id": 14,
-      "slug": "pharmacy-management",
-      "name": "Pharmacy Management System",
-      "industry": "healthcare",
-      "icon": "fa-prescription-bottle-medical",
-      "suite": "hmis",
-      "tagline": "Billing, batches and expiry for pharmacies.",
-      "audience": "Medical stores, pharmacy chains and hospital pharmacies.",
-      "intro": [
-        "Fast counter billing with batch and expiry tracked on every item. Reorder lists come from minimum stock levels, so you order what's actually running out.",
-        "Chains get a warehouse and branch transfers, with accounts and payroll built in."
-      ],
-      "features": [
-        [
-          "Batch & expiry",
-          "Expiry alerts, and min/max levels for each item."
-        ],
-        [
-          "Counter billing",
-          "Barcode scanning, discounts and prescription sales."
-        ],
-        [
-          "Purchases",
-          "Reorder lists, purchase returns and supplier payments, by manufacturer."
-        ],
-        [
-          "Branches & warehouse",
-          "Stock transfers between the warehouse and shops."
-        ],
-        [
-          "Accounts",
-          "Vouchers, ledgers, income statement and balance sheet."
-        ]
-      ],
-      "faq": [
-        [
-          "Can it handle several branches?",
-          "Yes. Each branch has its own stock, and head office sees all of them."
-        ],
-        [
-          "Can I see near-expiry stock?",
-          "Yes. There's an expiry report, so you can return stock to the supplier in time."
-        ]
-      ]
-    },
-    {
       "id": 15,
       "slug": "digital-invoicing-fbr",
       "name": "Digital Invoicing (FBR)",
