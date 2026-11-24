@@ -276,17 +276,34 @@ def home():
     return h + foot("")
 
 # ------------------------------------------------------------------ product page
+def screen_files(p):
+    return sorted(f for f in (ROOT / "assets" / "screens").glob(f"{p['slug']}-*") if f.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"))
+
+def screen_label(p, f):
+    t = f.stem[len(p["slug"]) + 1:].split("-", 1)[-1].replace("-", " ")
+    return t.upper() if len(t) <= 3 else t.capitalize()
+
+WIN_BAR = '<div class="bar"><i></i><i></i><i></i></div>'
+
 def screens_media(p, pre):
-    """Real screenshots: assets/screens/<slug>-<n>-<label>.jpg|png, shown in a browser-window mockup with tabs."""
-    files = sorted(f for f in (ROOT / "assets" / "screens").glob(f"{p['slug']}-*") if f.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"))
+    """Hero: the first real screenshot (assets/screens/<slug>-<n>-<label>.jpg) in the browser-window mockup."""
+    files = screen_files(p)
     if not files:
         return ""
-    def label(f):
-        t = f.stem[len(p["slug"]) + 1:].split("-", 1)[-1].replace("-", " ")
-        return t.upper() if len(t) <= 3 else t.capitalize()
-    imgs = "".join(f'<img src="{pre}assets/screens/{f.name}" alt="{e(p["name"])}: {e(label(f))}"{" class=on" if i == 0 else ""} loading="lazy">' for i, f in enumerate(files))
-    tabs = "" if len(files) < 2 else '<div class="stabs">' + "".join(f'<button type="button"{" class=on" if i == 0 else ""}>{e(label(f))}</button>' for i, f in enumerate(files)) + "</div>"
-    return f'<div class="media screen" data-screens><div class="win"><div class="bar"><i></i><i></i><i></i></div><div class="shots">{imgs}</div></div>{tabs}<div class="chip-stat"><b>Free</b><small>live demo</small></div></div>'
+    f = files[0]
+    return (f'<div class="media screen"><div class="win">{WIN_BAR}<img src="{pre}assets/screens/{f.name}" alt="{e(p["name"])}: {e(screen_label(p, f))}"></div>'
+            '<div class="chip-stat"><b>Free</b><small>live demo</small></div></div>')
+
+def screens_section(p, pre):
+    """Section near the end of the page with every real screenshot."""
+    files = screen_files(p)
+    if not files:
+        return ""
+    items = "".join(f'<figure class="gshot"><a class="win" href="{pre}assets/screens/{f.name}" target="_blank" rel="noopener">{WIN_BAR}'
+                    f'<img src="{pre}assets/screens/{f.name}" alt="{e(p["name"])}: {e(screen_label(p, f))}"></a>'
+                    f'<figcaption>{e(screen_label(p, f))}</figcaption></figure>' for f in files)
+    return (f'<section class="screens"><div class="wrap"><span class="kicker">Screens</span>'
+            f'<div class="sec-h"><h2>Inside {e(p["name"])}.</h2></div><div class="gallery">{items}</div></div></section>\n')
 
 def product_page(p):
     pre = "../"
@@ -345,7 +362,7 @@ def product_page(p):
   </aside>
 </div></section>
 
-<section><div class="wrap">
+{screens_section(p, pre)}<section><div class="wrap">
   <span class="kicker">More</span>
   <div class="sec-h"><h2>Related software.</h2><a href="../index.html#software">All software &rsaquo;</a></div>
   <div class="grid">{''.join(card(x, '../') for x in related)}</div>
