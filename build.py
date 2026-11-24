@@ -296,6 +296,8 @@ def product_page(p):
     if p.get("workflow"):
         body += '<h2>How it works</h2><ol class="steps-ol">' + "".join(f"<li>{e(s)}</li>" for s in p["workflow"]) + "</ol>"
     body += '<h2>What\'s included</h2><ul class="flist">' + "".join(f'<li><i class="fas {icons[n % len(icons)]}"></i><span><b>{e(t)}</b>{e(d)}</span></li>' for n, (t, d) in enumerate(p["features"])) + "</ul>"
+    if p.get("modules"):
+        body += '<h2>Modules in detail</h2><div class="mods">' + "".join(f'<div class="mod"><h3>{e(t)}</h3><ul>' + "".join(f"<li>{e(x)}</li>" for x in items) + "</ul></div>" for t, items in p["modules"]) + "</div>"
     if p.get("faq"):
         body += '<h2>Questions we get</h2><div class="faq">' + "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in p["faq"]) + "</div>"
     if p.get("suite") == "hmis":

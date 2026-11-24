@@ -62,161 +62,420 @@
     {
       "id": 19,
       "slug": "edurestaurant-web",
-      "name": "EduRestaurant Web",
+      "name": "EduRestaurant Manager Software",
       "industry": "food",
       "icon": "fa-utensils",
-      "tagline": "Restaurant billing and orders in the browser.",
-      "audience": "Restaurants, cafes, fast food outlets and takeaways.",
+      "tagline": "Complete restaurant software: orders, billing, kitchen, stock and accounts.",
+      "audience": "Restaurants, cafes, fast food outlets, takeaways and food chains.",
       "intro": [
-        "Take orders, run the tables and print bills from any browser, at the counter or in the office.",
-        "It works with the Restaurant Manager Android app, so waiters can take orders on their phones."
+        "EduRestaurant Manager runs the whole restaurant from one system. Orders are taken at the counter, at the table or on the waiter's phone, go straight to the kitchen, and the bill is ready when the guest asks for it.",
+        "Behind the counter it keeps the menu, raw material stock, purchases, staff and accounts, so the owner sees sales, costs and profit for every day without adding anything up by hand."
       ],
       "features": [
         [
-          "Orders & tables",
-          "Dine-in, takeaway and delivery orders, with table status at a glance."
+          "Point of sale",
+          "Fast billing for dine-in, takeaway and delivery."
         ],
         [
-          "Billing",
-          "Quick bills with discounts, taxes and payment type."
+          "Tables & waiters",
+          "Table status, orders per waiter and bill splitting."
         ],
         [
-          "Menu",
-          "Items, categories and prices kept in one place."
+          "Kitchen order tickets",
+          "Orders printed or shown in the right kitchen section."
         ],
         [
-          "Daily sales",
-          "Sales and closing reports for the owner."
+          "Menu & deals",
+          "Items, sizes, add-ons, deals and price changes."
+        ],
+        [
+          "Recipe stock",
+          "Raw material used per dish, so stock stays right."
+        ],
+        [
+          "Purchases & suppliers",
+          "Purchase orders, stock in and supplier balances."
+        ],
+        [
+          "Accounts",
+          "Cash book, expenses, ledgers and day closing."
+        ],
+        [
+          "Sales reports",
+          "Item-wise, waiter-wise, hour-wise and daily profit."
         ]
       ],
       "faq": [
         [
-          "Do I need to install anything?",
-          "No. It runs in the browser; open the demo with the login shown."
+          "Can waiters take orders on a phone?",
+          "Yes. The Restaurant Manager Android app sends orders from the table straight to the kitchen."
         ],
         [
-          "Can it work with the Android app?",
-          "Yes, the Restaurant Manager app takes orders on the phone."
+          "Does it work for more than one branch?",
+          "Yes. Each branch has its own sales and stock, and the owner sees all of them."
+        ],
+        [
+          "Do I need to install anything?",
+          "No. It runs in the browser; open the demo with the login shown."
+        ]
+      ],
+      "workflow": [
+        "Set up the menu, deals, tables and kitchen sections once.",
+        "Take a dine-in, takeaway or delivery order. The kitchen gets its order ticket (KOT) instantly.",
+        "Print the bill with discounts and taxes, and take cash, card or credit.",
+        "Stock is reduced by recipe, and the day closes with sales, cash and profit reports."
+      ],
+      "modules": [
+        [
+          "Front of house",
+          [
+            "Dine-in, takeaway and delivery orders",
+            "Table plan with free, occupied and billing status",
+            "Bill split, merge and transfer between tables",
+            "Discounts, service charge and tax on the bill"
+          ]
+        ],
+        [
+          "Kitchen",
+          [
+            "Kitchen order tickets by section",
+            "Order status from kitchen to table",
+            "Void and change tracking with reason"
+          ]
+        ],
+        [
+          "Inventory",
+          [
+            "Raw materials and recipes for every dish",
+            "Stock in from purchases, stock out by sale",
+            "Wastage, low-stock alerts and stock counts"
+          ]
+        ],
+        [
+          "Finance",
+          [
+            "Cash book, bank and expenses",
+            "Supplier and customer ledgers",
+            "Day closing with cash in hand",
+            "Profit and loss"
+          ]
         ]
       ]
     },
     {
       "id": 20,
       "slug": "edubs-rt-web",
-      "name": "EduBS RT Web",
+      "name": "EduBS RT",
       "industry": "retail",
       "icon": "fa-cash-register",
-      "tagline": "Business Solution for retail stores, now in the browser.",
-      "audience": "Retail shops, marts and stores with one or more counters.",
+      "tagline": "Business Solution for retail stores: billing, stock in, stock out and accounts.",
+      "audience": "Retail shops, marts, superstores and stores with one or more counters.",
       "intro": [
-        "The retail edition of Edusoft Business Solution, running in the browser. Counter sales, stock and accounts stay in one system."
+        "EduBS RT (Business Solution, Retail) is built for retail stores. Counter billing, purchases, stock in and stock out, customer and supplier accounts and financial reports all run in one system.",
+        "Every sale reduces stock and posts to accounts automatically, so the owner always knows what is on the shelf, what is owed, and what the store earned today."
       ],
       "features": [
         [
-          "Counter sales",
-          "Fast billing at one or more counters."
+          "Counter billing (POS)",
+          "Barcode billing on one or more counters."
         ],
         [
-          "Stock",
-          "Items, purchases and stock levels."
+          "Purchases",
+          "Purchase orders, purchase invoices and returns."
         ],
         [
-          "Customers & suppliers",
-          "Balances and ledgers for every party."
+          "Stock in / stock out",
+          "Every movement recorded with date and reason."
         ],
         [
-          "Reports",
-          "Daily sales, profit and stock reports."
+          "Stock levels",
+          "Current stock, minimum levels and reorder lists."
+        ],
+        [
+          "Customers & credit",
+          "Credit sales, receipts and customer ledgers."
+        ],
+        [
+          "Suppliers",
+          "Payables, payments and supplier ledgers."
+        ],
+        [
+          "Cash & bank",
+          "Cash book, bank accounts and expenses."
+        ],
+        [
+          "Financial reports",
+          "Daily sales, profit and loss, balance sheet."
         ]
       ],
       "faq": [
         [
-          "Is this the same as EduBSSTD Web?",
-          "It is the retail edition of the same Business Solution, set up for shop counters."
+          "What does RT stand for?",
+          "Retail. EduBS RT is the retail edition of Edusoft Business Solution."
+        ],
+        [
+          "Can it run several counters?",
+          "Yes. Each counter bills on its own and closes its own cash."
         ],
         [
           "Can I try it now?",
           "Yes. Open the demo with the login shown."
+        ]
+      ],
+      "workflow": [
+        "Add items with barcode, category, purchase and sale price.",
+        "Record purchases from suppliers. Stock comes in and the supplier's balance updates.",
+        "Sell at the counter with a barcode scanner. Stock goes out and the sale posts to accounts.",
+        "Check stock, receivables, payables and profit from the reports."
+      ],
+      "modules": [
+        [
+          "Sales",
+          [
+            "Barcode billing and quick item search",
+            "Cash, card and credit sales",
+            "Sale returns and exchanges",
+            "Discounts and price schemes"
+          ]
+        ],
+        [
+          "Purchase & stock",
+          [
+            "Purchase invoices and purchase returns",
+            "Stock in, stock out and stock transfer",
+            "Stock adjustment and physical count",
+            "Item-wise stock and valuation"
+          ]
+        ],
+        [
+          "Accounts",
+          [
+            "Customer and supplier ledgers",
+            "Cash book and bank book",
+            "Expenses and vouchers",
+            "Receivables and payables ageing"
+          ]
+        ],
+        [
+          "Reports",
+          [
+            "Daily sales and counter closing",
+            "Item-wise profit",
+            "Profit and loss, balance sheet",
+            "Low stock and fast/slow moving items"
+          ]
         ]
       ]
     },
     {
       "id": 1,
       "slug": "edubsstd-web",
-      "name": "EduBSSTD Web Edition",
+      "name": "EduBS Standard",
       "industry": "enterprise",
       "icon": "fa-cloud-arrow-up",
       "image": "assets/illustrations/edubsstd-web.svg",
-      "tagline": "Business Solution Standard, now in the browser.",
-      "audience": "Businesses already on the desktop version who want to log in from any PC or branch.",
+      "tagline": "Business Solution for distribution and trading businesses.",
+      "audience": "Distributors, wholesalers and trading companies.",
       "intro": [
-        "This is the web version of our Business Solution Standard software. Your staff keep the screens they already know, and you stop installing the software on every computer.",
-        "It's new, so the demo is still being filled in. Ask us for a walkthrough if something you need isn't there yet."
+        "EduBS Standard is built for distribution businesses. It covers order booking, deliveries, salesmen and routes, stock in the warehouse, and the full finance side: customers, suppliers, banks and financial statements.",
+        "Orders booked in the field turn into invoices and deliveries, stock and accounts update by themselves, and recoveries are tracked against every shop."
       ],
       "features": [
         [
-          "Runs in the browser",
-          "Chrome, Edge or Firefox. Nothing to install on each PC."
+          "Order booking",
+          "Orders by salesman, route and shop."
         ],
         [
-          "Same workflow as desktop",
-          "Sales, purchases, stock and party ledgers work the way your team is used to."
+          "Sales & delivery",
+          "Invoices, delivery loads and returns."
         ],
         [
-          "One database",
-          "Every branch and user works on the same data on the server."
+          "Purchases",
+          "Purchases from companies, with claims and returns."
+        ],
+        [
+          "Stock in / stock out",
+          "Warehouse stock, transfers and batch tracking."
+        ],
+        [
+          "Schemes & discounts",
+          "Trade offers, bonuses and price lists."
+        ],
+        [
+          "Recovery",
+          "Credit limits, recoveries and shop-wise balances."
+        ],
+        [
+          "Banks & finance",
+          "Bank accounts, cheques, vouchers and ledgers."
+        ],
+        [
+          "Reports",
+          "Sales, stock, profit and financial statements."
         ]
       ],
       "faq": [
         [
-          "Can we move our desktop data across?",
-          "Yes. We migrate your existing Business Solution data when we set you up."
+          "Is this the same as the desktop EduBS?",
+          "It is the same Business Solution, in the standard (distribution) edition, running in the browser."
         ],
         [
-          "Do we need internet all the time?",
-          "Yes, it is a web system. If your connection is unreliable, talk to us about a local server."
+          "Does it work with the Android app?",
+          "Yes. Salesmen can book orders on the Business Solution app."
+        ],
+        [
+          "Can I try it now?",
+          "Yes. Open the demo with the login shown."
+        ]
+      ],
+      "workflow": [
+        "Set up products, companies (principals), customers, salesmen and routes.",
+        "Book orders in the field or in the office, and turn them into sales invoices.",
+        "Load and deliver goods; stock goes out of the warehouse and receivables update.",
+        "Record recoveries and bank deposits, and close the month with financial reports."
+      ],
+      "modules": [
+        [
+          "Distribution",
+          [
+            "Salesmen, routes and shop lists",
+            "Order booking and delivery loading",
+            "Sale returns and damage claims",
+            "Salesman-wise sales and recovery"
+          ]
+        ],
+        [
+          "Inventory",
+          [
+            "Stock in from purchases, stock out on delivery",
+            "Multiple warehouses and transfers",
+            "Batch and expiry where needed",
+            "Stock valuation"
+          ]
+        ],
+        [
+          "Finance & banks",
+          [
+            "Customer and supplier ledgers",
+            "Bank accounts, cheques and deposits",
+            "Payment and receipt vouchers",
+            "Trial balance, profit and loss, balance sheet"
+          ]
+        ],
+        [
+          "Reports",
+          [
+            "Company-wise and product-wise sales",
+            "Route and salesman performance",
+            "Outstanding receivables",
+            "Daily cash and bank position"
+          ]
         ]
       ]
     },
     {
       "id": 2,
       "slug": "educampus-core-erp",
-      "name": "EduCampus Core ERP",
+      "name": "EduCampus Manager",
       "industry": "education",
       "icon": "fa-school",
       "image": "assets/illustrations/educampus-core-erp.svg",
-      "tagline": "Admissions, attendance and results for schools and colleges.",
-      "audience": "Schools, colleges and academies, single campus or several.",
+      "tagline": "School and college management: admissions, attendance, fees, exams and staff.",
+      "audience": "Schools, colleges, academies and school systems with several campuses.",
       "intro": [
-        "EduCampus keeps student records, attendance and exam results in one place, so the office isn't chasing registers at the end of every term.",
-        "It pairs with EduCampus Finance & Accounts if you also want fee vouchers and school accounts."
+        "EduCampus Manager runs a school or college from admission to result card. Student records, class attendance, fee vouchers, exams, timetables and staff are kept in one system that every campus shares.",
+        "Principals see attendance, fee collection and results for each class and campus, and parents can be informed by SMS without extra work for the office."
       ],
       "features": [
         [
           "Admissions",
-          "Student profile, class and section, guardian details and history."
+          "Inquiry, admission form, documents and student ID cards."
+        ],
+        [
+          "Student records",
+          "Profile, guardian details, history and promotions."
         ],
         [
           "Attendance",
-          "Daily attendance for students and staff, with monthly reports."
+          "Daily student and staff attendance with SMS to parents."
         ],
         [
-          "Exams & result cards",
-          "Enter marks once and print result cards for the whole class."
+          "Fee management",
+          "Fee vouchers in bulk, concessions, fines and defaulters."
         ],
         [
-          "Several campuses",
-          "Head office can see every branch from one login."
+          "Exams & results",
+          "Marks entry, grading and printed result cards."
+        ],
+        [
+          "Timetable",
+          "Class and teacher timetables."
+        ],
+        [
+          "Staff & payroll",
+          "Teacher records, attendance and salaries."
+        ],
+        [
+          "Multi-campus",
+          "Several campuses in one system, with combined reports."
         ]
       ],
       "faq": [
         [
-          "Is there a parent app?",
-          "Not in this demo. Tell us if you need one and we'll discuss it."
+          "Can it run several campuses?",
+          "Yes. Each campus has its own classes and fees, and management sees all of them together."
         ],
         [
-          "Can it print our own result card format?",
-          "Yes, we set up result cards to match your school's design."
+          "Can parents get SMS alerts?",
+          "Yes, for attendance, fee dues and results."
+        ],
+        [
+          "Can I try it now?",
+          "Yes. Open the demo with the login shown."
+        ]
+      ],
+      "workflow": [
+        "Set up campuses, classes, sections, subjects and the fee structure.",
+        "Admit students; each gets a record, roll number and fee plan.",
+        "Mark daily attendance, print fee vouchers and record collections.",
+        "Enter exam marks and print result cards, with reports for each class and campus."
+      ],
+      "modules": [
+        [
+          "Students",
+          [
+            "Admissions and withdrawals",
+            "Class, section and roll numbers",
+            "Promotions to the next class",
+            "ID cards and certificates"
+          ]
+        ],
+        [
+          "Academics",
+          [
+            "Subjects and class timetables",
+            "Exams, marks and grading",
+            "Result cards and merit lists",
+            "Homework and diary"
+          ]
+        ],
+        [
+          "Fees & finance",
+          [
+            "Fee structure per class",
+            "Bulk vouchers, concessions and fines",
+            "Collections and defaulter lists",
+            "Expenses and accounts"
+          ]
+        ],
+        [
+          "Staff & admin",
+          [
+            "Teacher and staff records",
+            "Attendance and leave",
+            "Payroll",
+            "SMS to parents and staff"
+          ]
         ]
       ]
     },
@@ -254,45 +513,134 @@
           "Validation",
           "Catches mistakes before submission."
         ]
+      ],
+      "modules": [
+        [
+          "Setup",
+          [
+            "Products with HS codes",
+            "Units of measure",
+            "Buyer registration (NTN/CNIC) and province",
+            "Sales tax rates by province"
+          ]
+        ],
+        [
+          "Invoicing",
+          [
+            "Sales tax invoices and debit/credit notes",
+            "Tax filled in automatically for each item",
+            "Validation before submission",
+            "QR code on the printed invoice"
+          ]
+        ],
+        [
+          "Records & reports",
+          [
+            "Submitted and pending invoices",
+            "Retry for failed submissions",
+            "Sales tax summaries for returns",
+            "Invoice history for audit"
+          ]
+        ]
       ]
     },
     {
       "id": 21,
       "slug": "edufuel",
-      "name": "EduFuel",
+      "name": "EduFuel Manager",
       "industry": "fuel",
       "icon": "fa-gas-pump",
-      "tagline": "Fuel station management: tanks, nozzles, shifts and credit customers.",
-      "audience": "Petrol pumps, CNG stations and fuel dealers.",
+      "tagline": "Fuel station software: nozzles, tanks, shifts, credit customers and accounts.",
+      "audience": "Petrol pumps, CNG stations, fuel dealers and oil depots.",
       "intro": [
-        "Keep every litre accounted for. Record nozzle readings and tank dips each shift, and see sales, stock and cash in one place."
+        "EduFuel Manager keeps every litre accounted for. Nozzle meter readings and tank dips are recorded each shift, and the system matches litres sold against cash collected.",
+        "Fuel purchases, lubricant sales, credit customers, staff and expenses are all in the same place, with daily sales, stock and profit for the owner."
       ],
       "features": [
         [
           "Nozzles & meter readings",
-          "Opening and closing readings per shift."
+          "Opening and closing readings per nozzle per shift."
         ],
         [
           "Tanks & dips",
-          "Fuel stock, purchases and dip records."
+          "Dip readings, stock and gain or loss."
         ],
         [
-          "Credit customers",
-          "Fleet and company accounts with balances."
+          "Fuel purchases",
+          "Tanker receipts and supplier balances."
         ],
         [
           "Shift cash",
-          "Cash, card and credit for every shift."
+          "Cash, card and credit for each shift and attendant."
+        ],
+        [
+          "Credit customers",
+          "Fleet and company accounts with limits and statements."
+        ],
+        [
+          "Rate changes",
+          "New rates applied from a set date and time."
+        ],
+        [
+          "Lubricants & shop",
+          "Oil, lubricant and tuck shop sales."
         ],
         [
           "Reports",
-          "Daily sales, stock and profit."
+          "Daily sales, stock, expenses and profit."
         ]
       ],
       "faq": [
         [
           "When can I try the demo?",
           "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
+        ],
+        [
+          "Does it work for CNG stations too?",
+          "Yes. Products and units are set up for each station."
+        ]
+      ],
+      "workflow": [
+        "Set up tanks, dispensers, nozzles, products and rates.",
+        "At each shift, enter opening and closing meter readings; sales are worked out by nozzle.",
+        "Record cash, card and credit sales and the shift's cash handover.",
+        "Record tank dips and fuel received; see stock gain or loss and daily profit."
+      ],
+      "modules": [
+        [
+          "Forecourt",
+          [
+            "Dispensers and nozzles",
+            "Shift opening and closing",
+            "Attendant-wise sales and cash",
+            "Testing and own-use litres"
+          ]
+        ],
+        [
+          "Tanks & stock",
+          [
+            "Tank dips and stock",
+            "Tanker receiving",
+            "Gain and loss reports",
+            "Lubricant stock"
+          ]
+        ],
+        [
+          "Customers",
+          [
+            "Credit customers and vehicles",
+            "Credit limits",
+            "Monthly statements and recoveries"
+          ]
+        ],
+        [
+          "Finance",
+          [
+            "Cash book and bank",
+            "Expenses and salaries",
+            "Supplier ledgers",
+            "Daily and monthly profit"
+          ]
         ]
       ]
     },
@@ -302,77 +650,198 @@
       "name": "Edu Enterprise",
       "industry": "enterprise",
       "icon": "fa-building",
-      "tagline": "One system for accounts, stock, sales and branches.",
-      "audience": "Growing companies with several branches or departments.",
+      "tagline": "Enterprise ERP: manufacturing, inventory, sales, purchase, finance and HR.",
+      "audience": "Manufacturers and growing companies with several departments or branches.",
       "intro": [
-        "Run the whole business from one system: accounts, inventory, purchasing, sales and payroll, with reports across every branch."
+        "Edu Enterprise is a full ERP for companies that make and sell. Production, raw material and finished goods stock, purchasing, sales, finance and HR run in one system, so every department works from the same numbers.",
+        "Management sees costs, stock, receivables and profit across the whole company, branch by branch and department by department."
       ],
       "features": [
         [
-          "Branches",
-          "Several branches and companies in one system."
-        ],
-        [
-          "Accounts",
-          "Vouchers, ledgers and financial statements."
+          "Manufacturing",
+          "Bills of material, production orders and costing."
         ],
         [
           "Inventory",
-          "Stock, purchases and transfers."
+          "Raw material, work in progress and finished goods."
         ],
         [
-          "Sales",
-          "Orders, invoices and receivables."
+          "Purchasing",
+          "Requisitions, purchase orders, receiving and returns."
         ],
         [
-          "Reports",
-          "Management reports across the business."
+          "Sales & dispatch",
+          "Quotations, sales orders, invoices and deliveries."
+        ],
+        [
+          "Finance",
+          "General ledger, banks, payables and receivables."
+        ],
+        [
+          "HR & payroll",
+          "Employees, attendance, leave and salaries."
+        ],
+        [
+          "Branches",
+          "Several companies, branches and warehouses."
+        ],
+        [
+          "Management reports",
+          "Cost, stock, sales and profit dashboards."
         ]
       ],
       "faq": [
         [
           "When can I try the demo?",
           "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
+        ],
+        [
+          "Can it be set up for our process?",
+          "Yes. Edu Enterprise is configured for each company's products, departments and approvals."
+        ]
+      ],
+      "workflow": [
+        "Set up products, bills of material, warehouses, departments and the chart of accounts.",
+        "Purchase raw material; it comes into the store against the purchase order.",
+        "Issue material to production, record output, and move finished goods into stock.",
+        "Sell and dispatch; accounts, costing and reports update across the company."
+      ],
+      "modules": [
+        [
+          "Production",
+          [
+            "Bills of material (recipes)",
+            "Production orders and material issue",
+            "Output, wastage and by-products",
+            "Production costing"
+          ]
+        ],
+        [
+          "Supply chain",
+          [
+            "Purchase requisitions and approvals",
+            "Goods received and quality check",
+            "Stock in, stock out and transfers",
+            "Warehouses and stock valuation"
+          ]
+        ],
+        [
+          "Sales",
+          [
+            "Quotations and sales orders",
+            "Dispatch and delivery challans",
+            "Invoices and sale returns",
+            "Customer credit limits"
+          ]
+        ],
+        [
+          "Finance & HR",
+          [
+            "Vouchers, ledgers and banks",
+            "Financial statements",
+            "Attendance, leave and payroll",
+            "Department and branch reports"
+          ]
         ]
       ]
     },
     {
       "id": 23,
       "slug": "edu-pharmacy",
-      "name": "Edu Pharmacy",
+      "name": "Edu Pharmacy Manager",
       "industry": "healthcare",
       "icon": "fa-pills",
-      "tagline": "Pharmacy billing with batch and expiry tracking.",
-      "audience": "Medical stores and pharmacy chains.",
+      "tagline": "Pharmacy ERP: counter billing, batch and expiry, purchases and accounts.",
+      "audience": "Medical stores, pharmacies, pharmacy chains and hospital pharmacies.",
       "intro": [
-        "Fast counter billing with every item tracked by batch and expiry date, so nothing expires on the shelf unnoticed."
+        "Edu Pharmacy Manager runs the pharmacy from the counter to the accounts. Every medicine is tracked by batch and expiry, so the right stock is sold first and nothing expires on the shelf unnoticed.",
+        "Purchases, supplier returns, stock between branches and the day's cash are all in one system, with reports the owner can check at any time."
       ],
       "features": [
         [
           "Counter billing",
-          "Quick sales with barcode scanning."
+          "Fast sales by barcode, brand or generic name."
         ],
         [
           "Batch & expiry",
-          "Expiry alerts before stock goes bad."
+          "Stock by batch, expiry alerts and near-expiry lists."
         ],
         [
-          "Purchases",
-          "Supplier orders and returns."
+          "Purchases & returns",
+          "Purchase invoices, bonuses and returns to suppliers."
         ],
         [
           "Stock levels",
-          "Reorder lists from minimum stock."
+          "Minimum levels and automatic reorder lists."
+        ],
+        [
+          "Generic substitutes",
+          "Find alternatives by generic name."
+        ],
+        [
+          "Branches & warehouse",
+          "Stock transfers between branches."
+        ],
+        [
+          "Accounts",
+          "Supplier ledgers, cash book and expenses."
         ],
         [
           "Reports",
-          "Sales, profit and stock reports."
+          "Sales, profit, stock value and expiry reports."
         ]
       ],
       "faq": [
         [
           "When can I try the demo?",
           "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
+        ],
+        [
+          "Can it handle more than one branch?",
+          "Yes. Each branch has its own stock, and transfers move stock between them."
+        ]
+      ],
+      "workflow": [
+        "Add medicines with generic name, pack size, batch and expiry.",
+        "Receive purchases from distributors; stock comes in by batch.",
+        "Bill at the counter with barcode or name search; the oldest batch goes out first.",
+        "Get expiry alerts, reorder lists and the day's sales and profit."
+      ],
+      "modules": [
+        [
+          "Counter",
+          [
+            "Barcode and name search",
+            "Cash and credit sales, returns",
+            "Discounts and loose (unit) sale",
+            "Counter closing"
+          ]
+        ],
+        [
+          "Inventory",
+          [
+            "Batch-wise stock in and stock out",
+            "Expiry and near-expiry alerts",
+            "Stock adjustment and counts",
+            "Branch transfers"
+          ]
+        ],
+        [
+          "Purchase",
+          [
+            "Purchase orders and invoices",
+            "Bonus and discount on purchase",
+            "Returns to distributors"
+          ]
+        ],
+        [
+          "Finance & reports",
+          [
+            "Supplier and customer ledgers",
+            "Cash book and expenses",
+            "Daily sales and profit",
+            "Stock valuation"
+          ]
         ]
       ]
     },
