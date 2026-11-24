@@ -11,12 +11,18 @@ from html import escape as e
 ROOT = Path(__file__).parent
 cat = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8-sig"))
 raw = {r["id"]: r for r in json.loads((ROOT / "data.json").read_text(encoding="utf-8-sig"))}
-COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a", "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a"}
+COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a", "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2"}
 OUT = ROOT / "assets" / "covers"
 FONT = "Inter, 'Segoe UI', Roboto, Arial, sans-serif"
 
 # kpis: (label, value)  chart: bars|line|donut  rows: (title, meta, status)  chip: (title, sub)
 SPEC = {
+ "edufuel": dict(screen="Shift summary", kpis=[("Litres sold", "18,420"), ("Tank stock", "62%"), ("Credit due", "Rs 4.1L")], chart="bars",
+                      rows=[("Nozzle 1 · Petrol", "Morning shift", "Closed"), ("Nozzle 3 · Diesel", "Morning shift", "Closed"), ("Tank 2 dip", "Diesel", "Due")], chip=("Shift closed", "Cash matched to readings")),
+ "edu-enterprise": dict(screen="Company overview", kpis=[("Branches", "6"), ("Sales MTD", "Rs 2.8Cr"), ("Receivable", "Rs 46L")], chart="line",
+                      rows=[("Head office", "Accounts · Payroll", "Live"), ("Branch 2", "Sales · Stock", "Live"), ("Stock transfer", "Warehouse to Branch 4", "In transit")], chip=("Reports ready", "All branches, one view")),
+ "edu-pharmacy": dict(screen="Counter billing", kpis=[("Sales today", "Rs 96K"), ("Bills", "184"), ("Expiring soon", "12")], chart="donut",
+                      rows=[("Paracetamol 500mg", "Batch K2210 · Exp 06/27", "x 2"), ("Amoxicillin 250mg", "Batch M7731 · Exp 01/27", "x 1"), ("ORS sachet", "Batch R1102 · Exp 09/27", "x 5")], chip=("Expiry alert", "12 items within 90 days")),
  "edurestaurant-web": dict(screen="Tables & orders", kpis=[("Sales today", "Rs 1.2L"), ("Open tables", "9"), ("Orders", "74")], chart="bars",
                       rows=[("Table 6", "Karahi, Naan x4", "Kitchen"), ("Takeaway 18", "Burger meal x2", "Ready"), ("Table 2", "Bill printed", "Paid")], chip=("Bill printed", "Table 2 · Rs 4,350")),
  "edubs-rt-web": dict(screen="Counter sale", kpis=[("Sales today", "Rs 3.4L"), ("Bills", "212"), ("Low stock", "14")], chart="line",
@@ -66,7 +72,7 @@ def mix(c1, c2, t):
 def T(x, y, s, size=11, fill="#1b2a22", weight=500, anchor="start", op=1):
     return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{fill}" text-anchor="{anchor}" opacity="{op}">{e(s)}</text>'
 
-STATUS_GOOD = ("paid", "present", "done", "posted", "ready", "live", "processed", "validated", "served", "on track", "admitted", "billed", "called", "checked in", "issued", "booked")
+STATUS_GOOD = ("closed", "paid", "present", "done", "posted", "ready", "live", "processed", "validated", "served", "on track", "admitted", "billed", "called", "checked in", "issued", "booked")
 
 def pill(x, y, s, c):
     good = s.lower() in STATUS_GOOD

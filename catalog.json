@@ -51,6 +51,12 @@
       "label": "Accounts, HR & ERP",
       "icon": "fa-building",
       "intro": "Accounts, payroll, multi-branch ERP and FBR digital invoicing."
+    },
+    {
+      "id": "fuel",
+      "label": "Fuel stations",
+      "icon": "fa-gas-pump",
+      "intro": "Software for petrol pumps and fuel stations."
     }
   ],
   "products": [
@@ -243,367 +249,6 @@
       ]
     },
     {
-      "id": 4,
-      "slug": "hospital-management-hmis",
-      "name": "Hospital Management System (HMIS)",
-      "industry": "healthcare",
-      "icon": "fa-hospital",
-      "suite": "hmis",
-      "tagline": "Patients, wards, pharmacy, lab and billing in one hospital system.",
-      "audience": "Hospitals and medical centres with several departments.",
-      "intro": [
-        "HMIS is the full hospital package. Reception, doctors, nurses, the lab, the pharmacy and accounts all work on the same patient record.",
-        "Every patient gets an MR number at registration, and that number follows them through OPD, admission, tests, medicines and the final bill."
-      ],
-      "features": [
-        [
-          "Patients & clinical notes",
-          "MR numbers, OPD and IPD, doctor and nurse screens, vital signs and history."
-        ],
-        [
-          "Wards, rooms & OT",
-          "Bed occupancy, room charges and operation theatre bookings."
-        ],
-        [
-          "Pharmacy & lab",
-          "Built-in pharmacy and pathology modules. Results go straight to the patient file."
-        ],
-        [
-          "Billing & insurance",
-          "Bills build up automatically as services are added. Panel and insurance patients are supported."
-        ],
-        [
-          "Admin",
-          "HR, payroll, purchasing and store inventory."
-        ],
-        [
-          "Reports",
-          "Daily cash, department income, admissions and more."
-        ]
-      ],
-      "faq": [
-        [
-          "Can we start with only some modules?",
-          "Yes. Many hospitals start with registration, OPD and pharmacy and add the rest later. Each module has its own demo login on this page."
-        ],
-        [
-          "Does it run on our own server?",
-          "It can run on your hospital's server or on ours. We'll recommend one after a site visit."
-        ]
-      ]
-    },
-    {
-      "id": 5,
-      "slug": "poultry-erp",
-      "name": "Poultry Business ERP",
-      "industry": "agri",
-      "icon": "fa-feather",
-      "tagline": "Flocks, feed, medicine and farm costs without registers.",
-      "audience": "Poultry farms, sheds and poultry traders.",
-      "intro": [
-        "Record each flock from the day the birds arrive: feed, vaccines, medicine, weight and mortality. At the end you see what the flock actually cost and what it earned."
-      ],
-      "features": [
-        [
-          "Flocks & sheds",
-          "Bird count per shed, transfers and placement dates."
-        ],
-        [
-          "Feed, vaccines & medicine",
-          "What was given, when and how much."
-        ],
-        [
-          "Daily weights & mortality",
-          "Track growth and catch problems early."
-        ],
-        [
-          "Costs & profit",
-          "Expenses per flock and a profit report when it's sold."
-        ]
-      ]
-    },
-    {
-      "id": 6,
-      "slug": "sanitary-erp",
-      "name": "Sanitary Management Software",
-      "industry": "retail",
-      "icon": "fa-faucet-drip",
-      "tagline": "Schedule sanitation staff and track areas and duties.",
-      "audience": "Facilities, housing schemes, hospitals and municipal sanitation teams.",
-      "intro": [
-        "Assign cleaning duties by area and shift, mark attendance, and see which areas were covered today. Supervisors get the picture without walking every zone."
-      ],
-      "features": [
-        [
-          "Duty scheduling",
-          "Assign staff to areas and shifts."
-        ],
-        [
-          "Attendance",
-          "Daily attendance and duty records for sanitation staff."
-        ],
-        [
-          "Area-wise status",
-          "Which zones were cleaned, and which were missed."
-        ],
-        [
-          "Reports",
-          "Staff, area and monthly reports for management."
-        ]
-      ]
-    },
-    {
-      "id": 7,
-      "slug": "electric-store-erp",
-      "name": "Electric Store Management",
-      "industry": "retail",
-      "icon": "fa-plug",
-      "tagline": "Stock, billing and accounts for electrical and electronics shops.",
-      "audience": "Electrical goods retailers and wholesalers.",
-      "intro": [
-        "Built for shops that sell a lot of different items, from wire and switches to fans and appliances. Scan barcodes at the counter, keep stock accurate, and keep track of what each customer and supplier owes."
-      ],
-      "features": [
-        [
-          "Items & categories",
-          "Organise thousands of items by brand and type."
-        ],
-        [
-          "Barcode billing",
-          "Scan, print the bill and the stock updates itself."
-        ],
-        [
-          "Purchases & sales records",
-          "Every transaction is saved and searchable."
-        ],
-        [
-          "Customer & supplier accounts",
-          "Balances and full history for each party."
-        ],
-        [
-          "Profit reports",
-          "Item-wise and day-wise profit."
-        ]
-      ],
-      "faq": [
-        [
-          "Is there a mobile app?",
-          "Yes. See Electric Store App below. It works with this system."
-        ]
-      ]
-    },
-    {
-      "id": 8,
-      "slug": "lab-diagnostic-erp",
-      "name": "Lab & Diagnostic Center Software",
-      "industry": "healthcare",
-      "icon": "fa-flask-vial",
-      "suite": "hmis",
-      "tagline": "From sample collection to the printed report.",
-      "audience": "Diagnostic labs, collection centres and hospital labs.",
-      "intro": [
-        "Each sample is logged at collection and tracked until the report is printed. Reports come out in a standard format, so there's no retyping in Word."
-      ],
-      "workflow": [
-        "Register the patient and book tests at the counter.",
-        "Label the sample and mark it collected.",
-        "Enter results on the technician screen.",
-        "Pathologist checks and approves.",
-        "Print the report or hand it over at the counter."
-      ],
-      "features": [
-        [
-          "Test & sample tracking",
-          "See the status of every sample at a glance."
-        ],
-        [
-          "Report templates",
-          "Standard formats with normal ranges."
-        ],
-        [
-          "Patient records",
-          "Previous reports are stored for repeat patients."
-        ]
-      ]
-    },
-    {
-      "id": 9,
-      "slug": "patient-registration-token",
-      "name": "Patient Registration & Token System",
-      "industry": "healthcare",
-      "icon": "fa-ticket",
-      "suite": "hmis",
-      "tagline": "Quick registration and a token queue for each department.",
-      "audience": "Hospital receptions, clinics and OPD counters.",
-      "intro": [
-        "The reception desk registers the patient once and prints a token for the right department. Patients wait for their number instead of crowding the door."
-      ],
-      "workflow": [
-        "Patient arrives. Reception searches by phone number or registers a new patient.",
-        "Choose the department or doctor and print a token.",
-        "The department calls tokens in order.",
-        "Visits are logged for daily reports."
-      ],
-      "features": [
-        [
-          "Fast registration",
-          "Repeat patients are found by phone number."
-        ],
-        [
-          "Department-wise tokens",
-          "Separate queues for each department or doctor."
-        ],
-        [
-          "Visit reports",
-          "Patients per day, per department."
-        ]
-      ]
-    },
-    {
-      "id": 10,
-      "slug": "opd-management",
-      "name": "OPD Management System",
-      "industry": "healthcare",
-      "icon": "fa-user-doctor",
-      "suite": "hmis",
-      "tagline": "Appointments, consultations and OPD billing.",
-      "audience": "Outpatient departments and private clinics.",
-      "intro": [
-        "Book appointments by time slot, record the consultation, and take the fee at the counter. The doctor sees the patient's earlier visits on the same screen."
-      ],
-      "workflow": [
-        "Book an appointment or take a walk-in.",
-        "Doctor records the consultation and prescription.",
-        "The counter collects the fee and prints a receipt.",
-        "Reports show visits and income per doctor."
-      ],
-      "features": [
-        [
-          "Appointments",
-          "Time slots per doctor."
-        ],
-        [
-          "Consultation records",
-          "Visit history and treatment notes."
-        ],
-        [
-          "Billing",
-          "Receipts and daily cash per counter."
-        ]
-      ]
-    },
-    {
-      "id": 11,
-      "slug": "financial-accounts",
-      "name": "Financial Accounts",
-      "industry": "enterprise",
-      "icon": "fa-scale-balanced",
-      "suite": "hmis",
-      "tagline": "Vouchers, ledgers, budgets and financial statements.",
-      "audience": "Accounts departments.",
-      "intro": [
-        "Standard double-entry accounting: vouchers, ledgers, trial balance, and income and balance sheet statements. Budgets can be set per head and compared with actual spending."
-      ],
-      "features": [
-        [
-          "Vouchers & ledgers",
-          "Cash, bank and journal vouchers posting to ledgers."
-        ],
-        [
-          "Statements",
-          "Trial balance, income statement and balance sheet."
-        ],
-        [
-          "Budgets",
-          "Budget versus actual by account head."
-        ]
-      ]
-    },
-    {
-      "id": 12,
-      "slug": "employee-payroll",
-      "name": "Employee & Payroll",
-      "industry": "enterprise",
-      "icon": "fa-id-card",
-      "suite": "hmis",
-      "tagline": "Staff records, leave and monthly salaries.",
-      "audience": "HR and payroll staff.",
-      "intro": [
-        "Keep employee files, leave and attendance in one place, then run the monthly payroll with allowances, deductions and claims worked out for you."
-      ],
-      "features": [
-        [
-          "Employee files",
-          "Personal details, appraisals and training records."
-        ],
-        [
-          "Leave & attendance",
-          "Leave balances and attendance reports."
-        ],
-        [
-          "Payroll",
-          "Allowances, deductions, claims and payslips."
-        ]
-      ]
-    },
-    {
-      "id": 13,
-      "slug": "business-solutions-enterprise",
-      "name": "Business Solutions Enterprise",
-      "industry": "enterprise",
-      "icon": "fa-building",
-      "tagline": "ERP for companies with several branches or businesses.",
-      "audience": "Distributors, manufacturers and groups of companies.",
-      "intro": [
-        "Our largest system. It handles several companies and branches under one login, with accounts, stock, purchasing, sales, payroll and banking connected.",
-        "Distributors use it for area-wise sales, targets and trade schemes. Manufacturers use it for batch-wise stock and campaigns."
-      ],
-      "features": [
-        [
-          "Multiple companies & branches",
-          "Separate books per unit, consolidated where you need it."
-        ],
-        [
-          "Accounts",
-          "Double entry with your own chart of accounts and one-click year closing."
-        ],
-        [
-          "Stock",
-          "Batch-wise stock, barcodes, several stock holders and stock revaluation."
-        ],
-        [
-          "Purchasing & sales",
-          "Tax setup, sales orders, trade schemes, areas and targets."
-        ],
-        [
-          "Payroll",
-          "Biometric attendance, salaries, leave and loans."
-        ],
-        [
-          "Banking",
-          "Bank accounts, reconciliation, receipts and payments."
-        ],
-        [
-          "User rights",
-          "Control exactly which screens each user can open."
-        ],
-        [
-          "MIS reports",
-          "Balance sheet, stock ageing, working capital and comparisons."
-        ]
-      ],
-      "faq": [
-        [
-          "How long does setup take?",
-          "It depends on the number of branches and how much old data you have. We'll give you a plan after the first meeting."
-        ],
-        [
-          "Does it work with our biometric machines?",
-          "It supports biometric attendance import. Tell us your machine model and we'll confirm."
-        ]
-      ]
-    },
-    {
       "id": 14,
       "slug": "pharmacy-management",
       "name": "Pharmacy Management System",
@@ -682,6 +327,126 @@
         [
           "Validation",
           "Catches mistakes before submission."
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "slug": "edufuel",
+      "name": "EduFuel",
+      "industry": "fuel",
+      "icon": "fa-gas-pump",
+      "tagline": "Fuel station management: tanks, nozzles, shifts and credit customers.",
+      "audience": "Petrol pumps, CNG stations and fuel dealers.",
+      "intro": [
+        "Keep every litre accounted for. Record nozzle readings and tank dips each shift, and see sales, stock and cash in one place."
+      ],
+      "features": [
+        [
+          "Nozzles & meter readings",
+          "Opening and closing readings per shift."
+        ],
+        [
+          "Tanks & dips",
+          "Fuel stock, purchases and dip records."
+        ],
+        [
+          "Credit customers",
+          "Fleet and company accounts with balances."
+        ],
+        [
+          "Shift cash",
+          "Cash, card and credit for every shift."
+        ],
+        [
+          "Reports",
+          "Daily sales, stock and profit."
+        ]
+      ],
+      "faq": [
+        [
+          "When can I try the demo?",
+          "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
+        ]
+      ]
+    },
+    {
+      "id": 22,
+      "slug": "edu-enterprise",
+      "name": "Edu Enterprise",
+      "industry": "enterprise",
+      "icon": "fa-building",
+      "tagline": "One system for accounts, stock, sales and branches.",
+      "audience": "Growing companies with several branches or departments.",
+      "intro": [
+        "Run the whole business from one system: accounts, inventory, purchasing, sales and payroll, with reports across every branch."
+      ],
+      "features": [
+        [
+          "Branches",
+          "Several branches and companies in one system."
+        ],
+        [
+          "Accounts",
+          "Vouchers, ledgers and financial statements."
+        ],
+        [
+          "Inventory",
+          "Stock, purchases and transfers."
+        ],
+        [
+          "Sales",
+          "Orders, invoices and receivables."
+        ],
+        [
+          "Reports",
+          "Management reports across the business."
+        ]
+      ],
+      "faq": [
+        [
+          "When can I try the demo?",
+          "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "slug": "edu-pharmacy",
+      "name": "Edu Pharmacy",
+      "industry": "healthcare",
+      "icon": "fa-pills",
+      "tagline": "Pharmacy billing with batch and expiry tracking.",
+      "audience": "Medical stores and pharmacy chains.",
+      "intro": [
+        "Fast counter billing with every item tracked by batch and expiry date, so nothing expires on the shelf unnoticed."
+      ],
+      "features": [
+        [
+          "Counter billing",
+          "Quick sales with barcode scanning."
+        ],
+        [
+          "Batch & expiry",
+          "Expiry alerts before stock goes bad."
+        ],
+        [
+          "Purchases",
+          "Supplier orders and returns."
+        ],
+        [
+          "Stock levels",
+          "Reorder lists from minimum stock."
+        ],
+        [
+          "Reports",
+          "Sales, profit and stock reports."
+        ]
+      ],
+      "faq": [
+        [
+          "When can I try the demo?",
+          "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
         ]
       ]
     },

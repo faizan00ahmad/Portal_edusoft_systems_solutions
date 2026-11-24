@@ -21,7 +21,7 @@ C = cat["company"]
 INDS = {i["id"]: i for i in cat["industries"]}
 # one accent colour per industry, used on cards, chips and product pages
 COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a",
-          "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a"}
+          "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2"}
 YEAR = 2026
 VER = int(time.time())  # cache-busting for css/js
 LOGO = "assets/edusoft-logo-light.png"
@@ -70,7 +70,7 @@ def youtube_id(url):
 def head(title, desc, pre, active="", page_url="", image="", accent=""):
     links = [("Software", f"{pre}index.html#software", "software"), ("Mobile apps", f"{pre}index.html#apps", "apps"),
              ("Clients", f"{pre}index.html#clients", "clients"), ("Contact", "#contact", "contact")]
-    og_img = SITE + (image or BYID[4]["poster"])
+    og_img = SITE + (image or BYID[14]["poster"])
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,6 +147,8 @@ def foot(pre):
 
 def demo_href(p, pre):
     """(href, label, extra attributes) for the main action of a product."""
+    if p["type"] == "web" and not p["url"]:  # demo link not ready yet
+        return wa("Hi Edusoft, I'd like a demo of " + p["name"] + "."), "Ask for a demo", 'target="_blank" rel="noopener"'
     if p["type"] == "web":
         return e(p["url"]), "Open demo", 'target="_blank" rel="noopener"'
     if APK_OK(p):
@@ -158,7 +160,12 @@ def demo_btn(p, pre, cls="btn demo"):
     icon = "fa-arrow-up-right-from-square" if p["type"] == "web" else "fa-android"
     return f'<a class="{cls}" href="{href}" {attrs}>{label} <i class="{"fas" if p["type"] == "web" else "fab"} {icon}"></i></a>'
 
+LOGIN_DL = lambda p: (f"<dt>Username</dt><dd><code>{e(p['username'])}</code></dd><dt>Password</dt><dd><code>{e(p['password'])}</code></dd>"
+                      if p['username'] else '<dt>Demo</dt><dd>Link coming soon</dd>')
+
 def creds(p):
+    if not p["username"]:
+        return '<span class="cred soon"><i class="far fa-clock"></i> Demo link coming soon</span>'
     return (f'<button class="cred" data-copy="{e(p["username"])}" title="Copy username">user <code>{e(p["username"])}</code> <i class="far fa-copy"></i></button>'
             f'<button class="cred" data-copy="{e(p["password"])}" title="Copy password">pass <code>{e(p["password"])}</code> <i class="far fa-copy"></i></button>')
 
@@ -195,7 +202,7 @@ def peek_data():
     return json.dumps(out, ensure_ascii=False).replace("</", "<\\/")
 
 # ------------------------------------------------------------------ home page
-INTRO_POSTER = "assets/video/intro-poster.jpg" if (ROOT / "assets/video/intro-poster.jpg").exists() else BYID[4]["poster"]
+INTRO_POSTER = "assets/video/intro-poster.jpg" if (ROOT / "assets/video/intro-poster.jpg").exists() else BYID[14]["poster"]
 
 def intro_video():
     """Short intro video beside the one-line intro. File: assets/video/intro.mp4, or "introVideo" (YouTube) in catalog.json."""
@@ -215,7 +222,7 @@ def intro_video():
 
 def home():
     h = head("Edusoft | Software & mobile app demos",
-             "Open live demos of Edusoft software and Android apps: hospital, pharmacy, school, retail, poultry, accounts, payroll and FBR invoicing.", "", "software", "", INTRO_POSTER)
+             "Open live demos of Edusoft software and Android apps: pharmacy, school, restaurant, retail, fuel station, business ERP and FBR invoicing.", "", "software", "", INTRO_POSTER)
     counts = {i: sum(1 for p in WEB if p["industry"] == i) for i in INDS}
     vid, vmodal = intro_video()
     logos = "".join(f'<img src="assets/clients/{c.name}" alt="" loading="lazy">' for c in sorted((ROOT / "assets" / "clients").glob("*.png")))
@@ -297,7 +304,7 @@ def product_page(p):
     related = [x for x in products if x["industry"] == p["industry"] and x["id"] != p["id"]][:3]
     if not related or p.get("suite") == "hmis":
         related = [x for x in products if x["type"] == p["type"] and x["id"] != p["id"] and x.get("suite") != "hmis"][:3]
-    demo_how = ("Download the APK and install it on an Android phone." if APK_OK(p) else "Ask us on WhatsApp and we'll send the APK.") if is_app else "Opens in a new tab."
+    demo_how = ("Download the APK and install it on an Android phone." if APK_OK(p) else "Ask us on WhatsApp and we'll send the APK.") if is_app else ("Opens in a new tab." if p["url"] else "The live demo link is coming soon. Message us and we'll show it to you.")
     h += f"""
 <header class="phero"><div class="wrap">
   <div>
@@ -306,7 +313,7 @@ def product_page(p):
     <h1>{e(p['name'])}</h1>
     <p class="lead">{e(p['tagline'])} For {e(p['audience'][0].lower() + p['audience'][1:])}</p>
     <div class="acts">{demo_btn(p, pre, 'btn demo')}<a class="btn btn-light" href="{wa('Hi Edusoft, I would like the price of ' + p['name'] + '.')}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Ask for a price</a></div>
-    <div class="logrow">Demo login: {creds(p)}</div>
+    <div class="logrow">{"Demo login: " if p["username"] else ""}{creds(p)}</div>
   </div>
   {media}
 </div></header>
@@ -316,7 +323,7 @@ def product_page(p):
   <aside class="side">
     <div class="panel">
       <h3>Trying the demo</h3>
-      <dl><dt>Platform</dt><dd>{'Android' if is_app else 'Web browser'}</dd><dt>Username</dt><dd><code>{e(p['username'])}</code></dd><dt>Password</dt><dd><code>{e(p['password'])}</code></dd></dl>
+      <dl><dt>Platform</dt><dd>{'Android' if is_app else 'Web browser'}</dd>{LOGIN_DL(p)}</dl>
       <p>{demo_how} The demo has sample data; your own copy is set up with your data.</p>
       {demo_btn(p, pre, 'btn demo')}
       <a class="btn btn-light" href="{tel(C['mobile'])}"><i class="fas fa-phone"></i> {C['mobile']}</a>

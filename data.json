@@ -278,5 +278,47 @@
     "summary": "",
     "description": "",
     "linkStatus": 200
+  },
+  {
+    "id": 21,
+    "type": "web",
+    "category": "",
+    "name": "EduFuel",
+    "isNew": true,
+    "username": "",
+    "password": "",
+    "url": "",
+    "image": "",
+    "summary": "",
+    "description": "",
+    "linkStatus": 0
+  },
+  {
+    "id": 22,
+    "type": "web",
+    "category": "",
+    "name": "Edu Enterprise",
+    "isNew": true,
+    "username": "",
+    "password": "",
+    "url": "",
+    "image": "",
+    "summary": "",
+    "description": "",
+    "linkStatus": 0
+  },
+  {
+    "id": 23,
+    "type": "web",
+    "category": "",
+    "name": "Edu Pharmacy",
+    "isNew": true,
+    "username": "",
+    "password": "",
+    "url": "",
+    "image": "",
+    "summary": "",
+    "description": "",
+    "linkStatus": 0
   }
 ]

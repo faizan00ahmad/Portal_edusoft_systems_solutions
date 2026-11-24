@@ -153,10 +153,10 @@
       <span class="tl">${esc(p.tagline)}</span>
       <p>${esc(p.intro)}</p>
       <ul class="pp-feats">${p.features.map(([t, d]) => `<li><i class="fas fa-check"></i><span><b>${esc(t)}</b>${esc(d)}</span></li>`).join('')}</ul>
-      <div class="logrow">
+      ${p.user ? `<div class="logrow">
         <button class="cred" data-copy="${esc(p.user)}">user <code>${esc(p.user)}</code> <i class="far fa-copy"></i></button>
         <button class="cred" data-copy="${esc(p.pass)}">pass <code>${esc(p.pass)}</code> <i class="far fa-copy"></i></button>
-      </div>`;
+      </div>` : '<div class="logrow"><span class="cred soon"><i class="far fa-clock"></i> Demo link coming soon</span></div>'}`;
     $('.pp-acts', pk).innerHTML = `
       <a class="btn demo" href="${esc(p.demo)}" ${p.demoBlank ? 'target="_blank" rel="noopener"' : ''} ${p.apk ? 'download' : ''}>${esc(p.demoLabel)}</a>
       <a class="btn btn-light" href="${esc(p.page)}">Full details</a>`;
