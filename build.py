@@ -107,7 +107,7 @@ def head(title, desc, pre, active="", page_url="", image="", accent=""):
 
 def cta(title="Need help choosing software?"):
     return f"""<div class="wrap" style="padding-top:20px"><div class="cta">
-  <div><h2>{e(title)}</h2><p>Multan office &middot; {C['phone']} &middot; {C['mobile']} &middot; {C['email']}</p></div>
+  <div><h2>{e(title)}</h2><p>Multan office &middot; {C['mobile']} &middot; {C['email']}</p></div>
   <a class="btn" href="{wa('Hi Edusoft, I need help choosing software.')}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Talk to us</a>
 </div></div>"""
 
@@ -125,7 +125,7 @@ def foot(pre):
       <p>Business software for Pakistani companies since {C['since']}.</p>
       <ul>
         <li><i class="fas fa-location-dot"></i><span>{e(C['address'])}</span></li>
-        <li><i class="fas fa-phone"></i><span><a href="{tel(C['phone'])}">{C['phone']}</a> &middot; <a href="{tel(C['mobile'])}">{C['mobile']}</a></span></li>
+        <li><i class="fas fa-phone"></i><span><a href="{tel(C['mobile'])}">{C['mobile']}</a></span></li>
         <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/{C['whatsapp']}" target="_blank" rel="noopener">{C['whatsappDisplay']}</a></li>
         <li><i class="fas fa-envelope"></i><a href="mailto:{C['email']}">{C['email']}</a></li>
       </ul>
