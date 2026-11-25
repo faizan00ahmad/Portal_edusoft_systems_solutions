@@ -74,6 +74,12 @@
       "label": "Pharmacy",
       "icon": "fa-prescription-bottle-medical",
       "intro": "Software for pharmacies and medical stores."
+    },
+    {
+      "id": "auto",
+      "label": "Auto dealers & showrooms",
+      "icon": "fa-car",
+      "intro": "Software for car and bike dealers, showrooms and used-vehicle traders."
     }
   ],
   "products": [
@@ -860,6 +866,111 @@
             "Daily sales and profit",
             "Stock valuation"
           ]
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "edu-auto-dealers",
+      "name": "Edu Auto Dealers",
+      "industry": "auto",
+      "icon": "fa-car",
+      "tagline": "Dealership software: vehicle stock, sales, installments, bookings and accounts.",
+      "audience": "Car and bike showrooms, used-car dealers, motorcycle dealers and auto traders.",
+      "intro": [
+        "Edu Auto Dealers keeps every vehicle on record from purchase to sale: chassis and engine number, model, colour, cost and where it stands today.",
+        "Bookings, cash and installment sales, file and registration transfers, commission, expenses and accounts are all in one place, with profit on every vehicle for the owner."
+      ],
+      "workflow": [
+        "Add vehicles bought from the company, an auction or a customer, with chassis, engine, model and cost.",
+        "Take bookings and advances, then sell on cash or installments and print the sale invoice and delivery letter.",
+        "Track installments, files, number plates and registration transfers for each customer.",
+        "See stock in hand, receivables, expenses and profit per vehicle and per month."
+      ],
+      "features": [
+        [
+          "Vehicle stock",
+          "Chassis, engine number, model, colour and status of every vehicle."
+        ],
+        [
+          "Purchase",
+          "New and used vehicle purchases with supplier and seller ledgers."
+        ],
+        [
+          "Bookings",
+          "Booking orders, advances and delivery dates."
+        ],
+        [
+          "Sales & invoices",
+          "Cash and installment sales with invoice and delivery letter."
+        ],
+        [
+          "Installments",
+          "Plans, due dates, receipts and overdue lists."
+        ],
+        [
+          "Files & registration",
+          "Documents, number plates and transfer status."
+        ],
+        [
+          "Commission & expenses",
+          "Agent commission, repair and showroom expenses per vehicle."
+        ],
+        [
+          "Reports",
+          "Stock, sales, receivables and profit per vehicle."
+        ]
+      ],
+      "modules": [
+        [
+          "Inventory",
+          [
+            "New and used vehicle stock",
+            "Chassis and engine numbers",
+            "Repair and preparation cost",
+            "Stock by model and colour"
+          ]
+        ],
+        [
+          "Sales",
+          [
+            "Bookings and advances",
+            "Cash and installment sales",
+            "Sale invoice and delivery letter",
+            "Trade-in vehicles"
+          ]
+        ],
+        [
+          "Customers",
+          [
+            "Customer ledgers",
+            "Installment plans and receipts",
+            "Overdue reminders",
+            "Files and registration transfer"
+          ]
+        ],
+        [
+          "Finance",
+          [
+            "Cash book and bank",
+            "Commission and expenses",
+            "Supplier and investor ledgers",
+            "Profit per vehicle and monthly"
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "When can I try the demo?",
+          "The live demo link is coming soon. Message us on WhatsApp and we'll show it to you."
+        ],
+        [
+          "Does it work for bikes as well as cars?",
+          "Yes. Cars, motorcycles, rickshaws and commercial vehicles can all be added."
+        ],
+        [
+          "Can it handle used-car buying and selling?",
+          "Yes. Each used vehicle has its own cost, repair expenses and profit."
         ]
       ]
     },

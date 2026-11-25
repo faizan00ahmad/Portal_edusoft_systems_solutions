@@ -11,12 +11,14 @@ from html import escape as e
 ROOT = Path(__file__).parent
 cat = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8-sig"))
 raw = {r["id"]: r for r in json.loads((ROOT / "data.json").read_text(encoding="utf-8-sig"))}
-COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a", "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2", "distribution": "#b7791f", "invoicing": "#2b6cb0", "pharmacy": "#0e8f9a"}
+COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a", "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2", "distribution": "#b7791f", "invoicing": "#2b6cb0", "pharmacy": "#0e8f9a", "auto": "#c2410c"}
 OUT = ROOT / "assets" / "covers"
 FONT = "Inter, 'Segoe UI', Roboto, Arial, sans-serif"
 
 # kpis: (label, value)  chart: bars|line|donut  rows: (title, meta, status)  chip: (title, sub)
 SPEC = {
+ "edu-auto-dealers": dict(screen="Showroom stock", kpis=[("In stock", "38"), ("Sold MTD", "21"), ("Installments due", "Rs 12L")], chart="bars",
+                      rows=[("Corolla Altis 2024", "Chassis NZE-4471", "Booked"), ("Honda CD 70", "Engine 88213", "Sold"), ("Civic Oriel 2022", "Used · Trade-in", "In stock")], chip=("Vehicle sold", "Invoice and delivery letter printed")),
  "edufuel": dict(screen="Shift summary", kpis=[("Litres sold", "18,420"), ("Tank stock", "62%"), ("Credit due", "Rs 4.1L")], chart="bars",
                       rows=[("Nozzle 1 · Petrol", "Morning shift", "Closed"), ("Nozzle 3 · Diesel", "Morning shift", "Closed"), ("Tank 2 dip", "Diesel", "Due")], chip=("Shift closed", "Cash matched to readings")),
  "edu-enterprise": dict(screen="Company overview", kpis=[("Branches", "6"), ("Sales MTD", "Rs 2.8Cr"), ("Receivable", "Rs 46L")], chart="line",

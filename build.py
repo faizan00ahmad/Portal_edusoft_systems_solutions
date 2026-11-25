@@ -32,7 +32,7 @@ def AP(pre):
     return pre + ("../" if LANG == "ur" else "")
 # one accent colour per industry, used on cards, chips and product pages
 COLORS = {"healthcare": "#0e8f9a", "education": "#5856d6", "retail": "#e2702a",
-          "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2", "distribution": "#b7791f", "invoicing": "#2b6cb0", "pharmacy": "#0e8f9a"}
+          "food": "#d9443a", "agri": "#6f9a1e", "enterprise": "#12884a", "fuel": "#1f6fb2", "distribution": "#b7791f", "invoicing": "#2b6cb0", "pharmacy": "#0e8f9a", "auto": "#c2410c"}
 YEAR = 2026
 VER = int(time.time())  # cache-busting for css/js
 LOGO = "assets/edusoft-logo-light.png"
