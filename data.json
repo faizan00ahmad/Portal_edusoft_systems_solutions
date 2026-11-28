@@ -285,13 +285,13 @@
     "category": "",
     "name": "EduFuel Manager",
     "isNew": true,
-    "username": "",
-    "password": "",
-    "url": "",
+    "username": "admin",
+    "password": "edu",
+    "url": "https://edufuelweb.mohdsajidhameed.com/",
     "image": "",
     "summary": "",
     "description": "",
-    "linkStatus": 0
+    "linkStatus": 200
   },
   {
     "id": 22,
